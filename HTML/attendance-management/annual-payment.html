@@ -1,434 +1,405 @@
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link href="https://www.cssscript.com/demo/sticky.css" rel="stylesheet" type="text/css"> -->
+       
+        <!--========== BOX ICONS ==========-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link href="https://www.cssscript.com/demo/sticky.css" rel="stylesheet" type="text/css"> -->
+        <!--========== CSS ==========-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+            <link rel="stylesheet" href="../../resources/css/sidebar.css">
+            <link rel="stylesheet" href="../../resources/css/attendance-management/annual-payment.css">
 
-    <!--========== BOX ICONS ==========-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <title>5DO</title>
+        <meta http-equiv="origin-trial" content="Az6AfRvI8mo7yiW5fLfj04W21t0ig6aMsGYpIqMTaX60H+b0DkO1uDr+7BrzMcimWzv/X7SXR8jI+uvbV0IJlwYAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A+USTya+tNvDPaxUgJooz+LaVk5hPoAxpLvSxjogX4Mk8awCTQ9iop6zJ9d5ldgU7WmHqBlnQB41LHHRFxoaBwoAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A7FovoGr67TUBYbnY+Z0IKoJbbmRmB8fCyirUGHavNDtD91CiGyHHSA2hDG9r9T3NjUKFi6egL3RbgTwhhcVDwUAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><link rel="preload" href="https://adservice.google.co.kr/adsid/integrator.js?domain=www.cssscript.com" as="script"><script type="text/javascript" src="https://adservice.google.co.kr/adsid/integrator.js?domain=www.cssscript.com"></script><link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=www.cssscript.com" as="script"><script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=www.cssscript.com"></script>
+        
+    </head>
+    <body>
 
-    <!--========== CSS ==========-->
-    <link rel="stylesheet" href="../../resources/css/sidebar.css">
-    <link rel="stylesheet" href="../../resources/css/attendance-management/annual-payment.css">
+        <!--========== HEADER ==========-->
+        <header class="header">
+            <div class="header__container">
 
-    <title>5DO</title>
-    <meta http-equiv="origin-trial"
-        content="Az6AfRvI8mo7yiW5fLfj04W21t0ig6aMsGYpIqMTaX60H+b0DkO1uDr+7BrzMcimWzv/X7SXR8jI+uvbV0IJlwYAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
-    <meta http-equiv="origin-trial"
-        content="A+USTya+tNvDPaxUgJooz+LaVk5hPoAxpLvSxjogX4Mk8awCTQ9iop6zJ9d5ldgU7WmHqBlnQB41LHHRFxoaBwoAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
-    <meta http-equiv="origin-trial"
-        content="A7FovoGr67TUBYbnY+Z0IKoJbbmRmB8fCyirUGHavNDtD91CiGyHHSA2hDG9r9T3NjUKFi6egL3RbgTwhhcVDwUAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
-    <link rel="preload" href="https://adservice.google.co.kr/adsid/integrator.js?domain=www.cssscript.com" as="script">
-    <script type="text/javascript"
-        src="https://adservice.google.co.kr/adsid/integrator.js?domain=www.cssscript.com"></script>
-    <link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=www.cssscript.com" as="script">
-    <script type="text/javascript"
-        src="https://adservice.google.com/adsid/integrator.js?domain=www.cssscript.com"></script>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+                <a href="#" class="header__logo"></a>
 
+                <div class="header__search">
+                    <input type="search" placeholder="Search" class="header__input">
+                    <i class="bx bx-search header__icon"></i>
+                </div>
 
-</head>
-
-<body>
-    <!--========== HEADER ==========-->
-    <header class="header">
-        <div class="header__container">
-
-            <a href="#" class="header__logo"></a>
-
-            <div class="header__search">
-                <input type="search" placeholder="Search" class="header__input">
-                <i class="bx bx-search header__icon"></i>
-            </div>
-
-            <div class="header__toggle">
-                <i class="bx bx-menu" id="header-toggle"></i>
-            </div>
-        </div>
-    </header>
-
-    <!--========== NAV ==========-->
-    <div class="nav" id="navbar">
-        <nav class="nav__container">
-            <div>
-                <a href="#" class="nav__link nav__logo">
-                    <i class="bx bxs-disc nav__icon"></i>
-                    <span class="nav__logo-name">5DO</span>
-                </a>
-
-                <!-- nav var -->
-                <div class="nav__list">
-
-                    <!-- nav 마이페이지 -->
-                    <div class="nav__items">
-                        <h3 class="nav__subtitle"></h3>
-
-                        <div class="nav__dropdown">
-                            <a href="#" class="nav__link">
-                                <i class="bx bx-home nav__icon"></i>
-                                <span class="nav__name">마이페이지</span>
-                                <i class="bx bx-chevron-down nav__icon nav__dropdown-icon"></i>
-                            </a>
-                            <div class="nav__dropdown-collapse">
-                                <!-- 중분류 -->
-                                <div class="nav__dropdown-content">
-                                    <div class="nav__dropdown-content-title">
-                                        인사 관리
-                                    </div>
-                                    <!-- 소분류 -->
-                                    <a href="#" class="nav__dropdown-item">인사기록카드</a>
-                                    <a href="#" class="nav__dropdown-item">Mail</a>
-                                    <a href="#" class="nav__dropdown-item">Accounts</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- nav 인사 -->
-                    <div class="nav__items">
-                        <div class="nav__dropdown">
-                            <a href="#" class="nav__link">
-                                <i class="bx bx-user nav__icon"></i>
-                                <span class="nav__name">인사</span>
-                                <i class="bx bx-chevron-down nav__icon nav__dropdown-icon"></i>
-                            </a>
-
-                            <div class="nav__dropdown-collapse">
-                                <div class="nav__dropdown-content">
-                                    <div class="nav__dropdown-content-title">
-                                        조직도
-                                    </div>
-                                    <a href="#" class="nav__dropdown-item">재직자 명단</a>
-                                </div>
-                                <div class="nav__dropdown-content">
-                                    <div class="nav__dropdown-content-title">
-                                        증명서
-                                    </div>
-                                    <a href="#" class="nav__dropdown-item">증명서 신청</a>
-                                    <a href="#" class="nav__dropdown-item">신청 현황</a>
-                                </div>
-                                <div class="nav__dropdown-content">
-                                    <div class="nav__dropdown-content-title">
-                                        인사팀 기능
-                                    </div>
-                                    <a href="#" class="nav__dropdown-item">신규 사원 등록</a>
-                                    <a href="#" class="nav__dropdown-item">인사 이동 명단</a>
-                                    <a href="#" class="nav__dropdown-item">퇴직자 명단</a>
-                                    <a href="#" class="nav__dropdown-item">상여금 명단</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- nav 근태 -->
-                    <div class="nav__items">
-                        <div class="nav__dropdown">
-                            <a href="#" class="nav__link">
-                                <i class="bx bx-building-house nav__icon"></i>
-                                <span class="nav__name">근태</span>
-                                <i class="bx bx-chevron-down nav__icon nav__dropdown-icon"></i>
-                            </a>
-
-                            <div class="nav__dropdown-collapse">
-                                <div class="nav__dropdown-content">
-                                    <div class="nav__dropdown-content-title">
-                                        조직도
-                                    </div>
-                                    <a href="#" class="nav__dropdown-item">인사기록카드</a>
-                                    <a href="#" class="nav__dropdown-item">Mail</a>
-                                    <a href="#" class="nav__dropdown-item">Accounts</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- nav 전자 결재 -->
-                    <div class="nav__items">
-                        <div class="nav__dropdown">
-                            <a href="#" class="nav__link">
-                                <i class="bx bx-edit nav__icon"></i>
-                                <span class="nav__name">전자결재</span>
-                                <i class="bx bx-chevron-down nav__icon nav__dropdown-icon"></i>
-                            </a>
-
-                            <div class="nav__dropdown-collapse">
-                                <div class="nav__dropdown-content">
-                                    <div class="nav__dropdown-content-title">
-                                        인사 관리
-                                    </div>
-                                    <a href="#" class="nav__dropdown-item">인사기록카드</a>
-                                    <a href="#" class="nav__dropdown-item">Mail</a>
-                                    <a href="#" class="nav__dropdown-item">Accounts</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- nav 급여 -->
-                    <div class="nav__items">
-                        <div class="nav__dropdown">
-                            <a href="#" class="nav__link">
-                                <i class="bx bx-money nav__icon"></i>
-                                <span class="nav__name">급여</span>
-                                <i class="bx bx-chevron-down nav__icon nav__dropdown-icon"></i>
-                            </a>
-
-                            <div class="nav__dropdown-collapse">
-                                <div class="nav__dropdown-content">
-                                    <div class="nav__dropdown-content-title">
-                                        인사 관리
-                                    </div>
-                                    <a href="#" class="nav__dropdown-item">인사기록카드</a>
-                                    <a href="#" class="nav__dropdown-item">Mail</a>
-                                    <a href="#" class="nav__dropdown-item">Accounts</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 새 소식 -->
-                    <div class="nav__items">
-                        <div class="nav__dropdown">
-                            <a href="#" class="nav__link">
-                                <i class="bx bx-message-edit nav__icon"></i>
-                                <span class="nav__name">새 소식</span>
-                                <i class="bx bx-chevron-down nav__icon nav__dropdown-icon"></i>
-                            </a>
-
-                            <div class="nav__dropdown-collapse">
-                                <div class="nav__dropdown-content">
-                                    <div class="nav__dropdown-content-title">
-                                        인사 관리
-                                    </div>
-                                    <a href="#" class="nav__dropdown-item">인사기록카드</a>
-                                    <a href="#" class="nav__dropdown-item">Mail</a>
-                                    <a href="#" class="nav__dropdown-item">Accounts</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 캘린더 -->
-                    <div class="nav__items">
-                        <div class="nav__dropdown">
-                            <a href="#" class="nav__link">
-                                <i class="bx bx-calendar-check nav__icon"></i>
-                                <span class="nav__name">캘린더</span>
-                                <i class="bx bx-chevron-down nav__icon nav__dropdown-icon"></i>
-                            </a>
-
-                            <div class="nav__dropdown-collapse">
-                                <div class="nav__dropdown-content">
-                                    <div class="nav__dropdown-content-title">
-                                        캘린더
-                                    </div>
-                                    <a href="#" class="nav__dropdown-item">인사기록카드</a>
-                                    <a href="#" class="nav__dropdown-item">Mail</a>
-                                    <a href="#" class="nav__dropdown-item">Accounts</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 메세지 -->
-                    <div class="nav__items">
-                        <div class="nav__dropdown">
-                            <a href="#" class="nav__link">
-                                <i class="bx bx-envelope nav__icon"></i>
-                                <span class="nav__name">메세지</span>
-                                <i class="bx bx-chevron-down nav__icon nav__dropdown-icon"></i>
-                            </a>
-
-                            <div class="nav__dropdown-collapse">
-                                <div class="nav__dropdown-content">
-                                    <div class="nav__dropdown-content-title">
-                                        인사 관리
-                                    </div>
-                                    <a href="#" class="nav__dropdown-item">인사기록카드</a>
-                                    <a href="#" class="nav__dropdown-item">Mail</a>
-                                    <a href="#" class="nav__dropdown-item">Accounts</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                <div class="header__toggle">
+                    <i class="bx bx-menu" id="header-toggle"></i>
                 </div>
             </div>
+        </header>
 
-            <a href="#" class="nav__link nav__logout">
-                <i class="bx bx-log-out nav__icon"></i>
-                <span class="nav__name">로그아웃</span>
-            </a>
-        </nav>
-    </div>
-
-    <!--========== CONTENTS ==========-->
-    <main>
-        <div class="main">
-
-            <div class="title">
-                <p>연차 결제 리스트</p>
-            </div>
-
-            <div>
-                <div class="search-top">
-                    <div class="float-left mr-4">
-                        <span class="mr-2">부서 이름</span>
-                        <select>
-                            <option>전체</option>
-                            <option>경영관리부</option>
-                            <option>마케팅부</option>
-                        </select>
-                    </div>
-
-                    <div class="float-left mr-4">
-                        <span class="mr-2">사원</span>
-                        <input>
-                    </div>
-
-                    <div class="float-left mr-5">
-                        <span class="mr-2">결제 상태</span>
-                        <select>
-                            <option>전체</option>
-                            <option>완료</option>
-                            <option>취소</option>
-                            <option>반려</option>
-                        </select>
-                    </div>
-
-                    <div class="float-left search-btn">
-                        <button>조회</button>
-                    </div>
-                </div>
+        <!--========== NAV ==========-->
+        <div class="nav" id="navbar">
+            <nav class="nav__container">
                 <div>
-                    <div class="float-left mr-4">
-                        <span class="mr-2">기간</span>
-                        <input type="date">
-                        <span>~</span>
-                        <input type="date">
+                    <a href="#" class="nav__link nav__logo">
+                        <i class="bx bxs-disc nav__icon"></i>
+                        <span class="nav__logo-name">5DO</span>
+                    </a>
+
+                    <!-- nav var -->
+                    <div class="nav__list">
+
+                        <!-- nav 마이페이지 -->
+                        <div class="nav__items">
+                            <h3 class="nav__subtitle"></h3>
+
+                            <div class="nav__dropdown">
+                                <a href="#" class="nav__link">
+                                    <i class="bx bx-home nav__icon"></i>
+                                    <span class="nav__name">마이페이지</span>
+                                    <i class="bx bx-chevron-down nav__icon nav__dropdown-icon"></i>
+                                </a>
+                                <div class="nav__dropdown-collapse">
+                                    <!-- 중분류 -->
+                                    <div class="nav__dropdown-content">
+                                        <div class="nav__dropdown-content-title">
+                                            개인정보관리
+                                        </div> <hr>
+                                        <div class="nav__dropdown-content-title">
+                                            나의연차관리
+                                        </div> <hr>
+                                        <div class="nav__dropdown-content-title">
+                                            나의근태관리
+                                        </div> <hr>
+                                        <div class="nav__dropdown-content-title">
+                                            나의쪽지함
+                                        </div> <hr>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- nav 인사 -->
+                        <div class="nav__items">
+                            <div class="nav__dropdown">
+                                <a href="#" class="nav__link">
+                                    <i class="bx bx-user nav__icon"></i>
+                                    <span class="nav__name">인사</span>
+                                    <i class="bx bx-chevron-down nav__icon nav__dropdown-icon"></i>
+                                </a>
+
+                                <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <div class="nav__dropdown-content-title">
+                                            조직도
+                                        </div> <hr>
+                                            <a href="#" class="nav__dropdown-item">재직자 명단</a>
+                                    </div>
+                                    <div class="nav__dropdown-content">
+                                        <div class="nav__dropdown-content-title">
+                                            증명서
+                                        </div> <hr>
+                                            <a href="#" class="nav__dropdown-item">증명서 신청</a>
+                                            <a href="#" class="nav__dropdown-item">신청 현황</a>
+                                    </div>
+                                    <div class="nav__dropdown-content">
+                                        <div class="nav__dropdown-content-title">
+                                            인사팀 기능
+                                        </div> <hr>
+                                            <a href="#" class="nav__dropdown-item">신규 사원 등록</a>
+                                            <a href="#" class="nav__dropdown-item">인사 이동 명단</a>
+                                            <a href="#" class="nav__dropdown-item">퇴직자 명단</a>
+                                            <a href="#" class="nav__dropdown-item">상여금 명단</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- nav 근태 -->
+                        <div class="nav__items">
+                            <div class="nav__dropdown">
+                                <a href="#" class="nav__link">
+                                    <i class="bx bx-building-house nav__icon"></i>
+                                    <span class="nav__name">근태</span>
+                                    <i class="bx bx-chevron-down nav__icon nav__dropdown-icon"></i>
+                                </a>
+
+                                <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <div class="nav__dropdown-content-title">
+                                            조직도
+                                        </div> <hr>
+                                            <a href="#" class="nav__dropdown-item">인사기록카드</a>
+                                            <a href="#" class="nav__dropdown-item">Mail</a>
+                                            <a href="#" class="nav__dropdown-item">Accounts</a>
+                                    </div>
+                                    <div class="nav__dropdown-content">
+                                        <div class="nav__dropdown-content-title">
+                                            근태 관리
+                                        </div> <hr>
+                                            <a href="#" class="nav__dropdown-item">근태 조회 및 관리</a>
+                                            <a href="#" class="nav__dropdown-item">근무 시간 이력 조회</a> 
+                                    </div>
+                                    <div class="nav__dropdown-content">
+                                        <div class="nav__dropdown-content-title">
+                                            휴가 관리
+                                        </div> <hr>
+                                            <a href="#" class="nav__dropdown-item">연차 결제 리스트</a>
+                                            <a href="#" class="nav__dropdown-item">연차 내역</a>
+                                            <a href="#" class="nav__dropdown-item">연차 관리</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- nav 전자 결재 -->
+                        <div class="nav__items">
+                            <div class="nav__dropdown">
+                                <a href="#" class="nav__link">
+                                    <i class="bx bx-edit nav__icon"></i>
+                                    <span class="nav__name">전자결재</span>
+                                    <i class="bx bx-chevron-down nav__icon nav__dropdown-icon"></i>
+                                </a>
+
+                                <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <div class="nav__dropdown-content-title">
+                                            기안함
+                                        </div> <hr>
+                                            <a href="#" class="nav__dropdown-item">문서작성</a>
+                                    </div>
+                                    <div class="nav__dropdown-content">
+                                        <div class="nav__dropdown-content-title">
+                                            결재 상신함
+                                        </div> <hr>
+                                            <a href="#" class="nav__dropdown-item">결재진행함</a>
+                                            <a href="#" class="nav__dropdown-item">결재요청함</a>
+                                    </div>
+                                    <div class="nav__dropdown-content">
+                                        <div class="nav__dropdown-content-title">
+                                            결재 수신함
+                                        </div> <hr>
+                                            <a href="#" class="nav__dropdown-item">결재내역</a>
+                                            <a href="#" class="nav__dropdown-item">결재요청</a>
+                                            <a href="#" class="nav__dropdown-item">대리결재</a>
+                                            <a href="#" class="nav__dropdown-item">수신참조</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- nav 급여 -->
+                        <div class="nav__items">
+                            <div class="nav__dropdown">
+                                <a href="#" class="nav__link">
+                                    <i class="bx bx-money nav__icon"></i>
+                                    <span class="nav__name">급여</span>
+                                    <i class="bx bx-chevron-down nav__icon nav__dropdown-icon"></i>
+                                </a>
+
+                                <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <div class="nav__dropdown-content-title">
+                                            인사 관리
+                                        </div> <hr>
+                                            <a href="#" class="nav__dropdown-item">인사기록카드</a>
+                                            <a href="#" class="nav__dropdown-item">Mail</a>
+                                            <a href="#" class="nav__dropdown-item">Accounts</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 새 소식 -->
+                        <div class="nav__items">
+                            <div class="nav__dropdown">
+                                <a href="#" class="nav__link">
+                                    <i class="bx bx-message-edit nav__icon"></i>
+                                    <span class="nav__name">새 소식</span>
+                                    <i class="bx bx-chevron-down nav__icon nav__dropdown-icon"></i>
+                                </a>
+
+                                <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <div class="nav__dropdown-content-title">
+                                            인사 관리
+                                        </div> <hr>
+                                            <a href="#" class="nav__dropdown-item">인사기록카드</a>
+                                            <a href="#" class="nav__dropdown-item">Mail</a>
+                                            <a href="#" class="nav__dropdown-item">Accounts</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 캘린더 -->
+                        <div class="nav__items">
+                            <div class="nav__dropdown">
+                                <a href="#" class="nav__link">
+                                    <i class="bx bx-calendar-check nav__icon"></i>
+                                    <span class="nav__name">캘린더</span>
+                                    <i class="bx bx-chevron-down nav__icon nav__dropdown-icon"></i>
+                                </a>
+
+                                <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <div class="nav__dropdown-content-title">
+                                            캘린더
+                                        </div> <hr>
+                                            <a href="#" class="nav__dropdown-item">인사기록카드</a>
+                                            <a href="#" class="nav__dropdown-item">Mail</a>
+                                            <a href="#" class="nav__dropdown-item">Accounts</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 메세지 -->
+                        <div class="nav__items">
+                            <div class="nav__dropdown">
+                                <a href="#" class="nav__link">
+                                    <i class="bx bx-envelope nav__icon"></i>
+                                    <span class="nav__name">메세지</span>
+                                    <i class="bx bx-chevron-down nav__icon nav__dropdown-icon"></i>
+                                </a>
+
+                                <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <div class="nav__dropdown-content-title">
+                                            인사 관리
+                                        </div> <hr>
+                                            <a href="#" class="nav__dropdown-item">인사기록카드</a>
+                                            <a href="#" class="nav__dropdown-item">Mail</a>
+                                            <a href="#" class="nav__dropdown-item">Accounts</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <a href="#" class="nav__link nav__logout">
+                    <i class="bx bx-log-out nav__icon"></i>
+                    <span class="nav__name">로그아웃</span>
+                </a>
+            </nav>
+        </div>
+
+        <!--========== CONTENTS ==========-->
+        <main>
+            <div class="main">
+
+                <div class="title">
+                    <p>연차 결제 리스트</p>
+                </div>
+
+                <div>
+                    <div class="search-top">
+                        <div class="float-left mr-4">
+                            <span class="mr-2">부서 이름</span>
+                            <select>
+                                <option>전체</option>
+                                <option>경영관리부</option>
+                                <option>마케팅부</option>
+                            </select>
+                        </div>
+
+                        <div class="float-left mr-4">
+                            <span class="mr-2">사원</span>
+                            <input>
+                        </div>
+
+                        <div class="float-left mr-5">
+                            <span class="mr-2">결제 상태</span>
+                            <select>
+                                <option>전체</option>
+                                <option>완료</option>
+                                <option>취소</option>
+                                <option>반려</option>
+                            </select>
+                        </div>
+
+                        <div class="float-left search-btn">
+                            <button>조회</button>
+                        </div>
                     </div>
                     <div>
-                        <span class="mr-2">고용형태</span>
-                        <select>
-                            <option>정규직</option>
-                            <option>임원</option>
-                            <option>계약직</option>
-                        </select>
+                        <div class="float-left mr-4">
+                            <span class="mr-2">기간</span>
+                            <input type="date">
+                            <span>~</span>
+                            <input type="date">
+                        </div>
+                        <div>
+                            <span class="mr-2">고용형태</span>
+                            <select>
+                                <option>정규직</option>
+                                <option>임원</option>
+                                <option>계약직</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
+
+                <div class="mt-5">
+                    <table class="table">
+                        <thead>
+                        <tr class="text-center">
+                            <th scope="col">No</th>
+                            <th scope="col">부서</th>
+                            <th scope="col">팀</th>
+                            <th scope="col">직급</th>
+                            <th scope="col">성명</th>
+                            <th scope="col">고용형태</th>
+                            <th scope="col">재직구분</th>
+                            <th scope="col">휴가구분</th>
+                            <th scope="col">결제상태</th>
+                            <th scope="col">문서날짜</th>
+                        </tr>
+                        </thead>
+                        <tbody class="text-center">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>경영관리부</td>
+                            <td>영업1팀</td>
+                            <td>대리</td>
+                            <td>홍길동</td>
+                            <td>정규직</td>
+                            <td>재직중</td>
+                            <td>기본연차</td>
+                            <td>완료</td>
+                            <td>2022-01-01</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">Previous</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Next</span>
+                            </a>
+                        </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-
-            <div class="mt-5">
-                <table class="table">
-                    <thead>
-                      <tr class="text-center">
-                        <th scope="col">No</th>
-                        <th scope="col">부서</th>
-                        <th scope="col">팀</th>
-                        <th scope="col">직급</th>
-                        <th scope="col">성명</th>
-                        <th scope="col">고용형태</th>
-                        <th scope="col">재직구분</th>
-                        <th scope="col">휴가구분</th>
-                        <th scope="col">결제상태</th>
-                        <th scope="col">문서날짜</th>
-                      </tr>
-                    </thead>
-                    <tbody class="text-center">
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>경영관리부</td>
-                        <td>영업1팀</td>
-                        <td>대리</td>
-                        <td>홍길동</td>
-                        <td>정규직</td>
-                        <td>재직중</td>
-                        <td>기본연차</td>
-                        <td>완료</td>
-                        <td>2022-01-01</td>
-                      </tr>
-                    </tbody>
-                </table>
-
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center">
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                          <span aria-hidden="true">&laquo;</span>
-                          <span class="sr-only">Previous</span>
-                        </a>
-                      </li>
-                      <li class="page-item"><a class="page-link" href="#">1</a></li>
-                      <li class="page-item"><a class="page-link" href="#">2</a></li>
-                      <li class="page-item"><a class="page-link" href="#">3</a></li>
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                          <span aria-hidden="true">&raquo;</span>
-                          <span class="sr-only">Next</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-            </div>
-        </div>
-    </main>
-
-
-
-
-
-
+        </main>
+    </body>
 
     <!--========== MAIN JS ==========-->
     <script src="assets/js/main.js"></script>
-    <script>
-        try {
-            fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function (response) {
-                return true;
-            }).catch(function (e) {
-                var carbonScript = document.createElement("script");
-                carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CE7DC2JW&placement=wwwcssscriptcom";
-                carbonScript.id = "_carbonads_js";
-                document.getElementById("carbon-block").appendChild(carbonScript);
-            });
-        } catch (error) {
-            console.log(error);
-        }
-    </script>
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date(); a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-46156385-1', 'cssscript.com');
-        ga('send', 'pageview');
-
-    </script>
-
-
-    <ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;"
-        data-ad-status="unfilled">
-        <div id="aswift_1_host" tabindex="0" title="Advertisement" aria-label="Advertisement"
-            style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;">
-            <iframe id="aswift_1" name="aswift_1"
-                style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;"
-                sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
-                frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true"
-                scrolling="no"
-                src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-2783044520727903&amp;output=html&amp;adk=1812271804&amp;adf=3025194257&amp;lmt=1614749694&amp;plat=1%3A16777216%2C2%3A16777216%2C3%3A16%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32&amp;plas=596x615_r&amp;format=0x0&amp;url=https%3A%2F%2Fwww.cssscript.com%2Fdemo%2Fresponsive-multi-level-sidebar-menu%2F%23&amp;ea=0&amp;pra=7&amp;wgl=1&amp;uach=WyJXaW5kb3dzIiwiMTAuMC4wIiwieDg2IiwiIiwiMTA5LjAuNTQxNC4xMjAiLFtdLGZhbHNlLG51bGwsIjY0IixbWyJOb3RfQSBCcmFuZCIsIjk5LjAuMC4wIl0sWyJHb29nbGUgQ2hyb21lIiwiMTA5LjAuNTQxNC4xMjAiXSxbIkNocm9taXVtIiwiMTA5LjAuNTQxNC4xMjAiXV0sZmFsc2Vd&amp;dt=1675677935021&amp;bpp=9&amp;bdt=59&amp;idt=67&amp;shv=r20230201&amp;mjsv=m202301120101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3Db1ecaa42e5e6c539-2220e4fd90d90067%3AT%3D1675676636%3ART%3D1675676636%3AS%3DALNI_MaytAq-sYDfdN53VNpt5dWYsrtT-A&amp;gpic=UID%3D00000bb6a223f9f6%3AT%3D1675676636%3ART%3D1675676636%3AS%3DALNI_MZC2bqVzr0HkfoBDlqlP0i0dnFm6g&amp;prev_fmts=728x90&amp;nras=1&amp;correlator=675603675549&amp;frm=20&amp;pv=1&amp;ga_vid=1660474216.1675676636&amp;ga_sid=1675677935&amp;ga_hid=1056439860&amp;ga_fc=1&amp;u_tz=540&amp;u_his=1&amp;u_h=1200&amp;u_w=1920&amp;u_ah=1160&amp;u_aw=1920&amp;u_cd=24&amp;u_sd=1&amp;dmc=8&amp;adx=-12245933&amp;ady=-12245933&amp;biw=1920&amp;bih=1089&amp;scr_x=0&amp;scr_y=0&amp;eid=44759875%2C44759926%2C44759837%2C44779793&amp;oid=2&amp;pvsid=1915075072139982&amp;tmod=247625068&amp;uas=0&amp;nvt=2&amp;ref=http%3A%2F%2Fjynote.net%2F&amp;eae=2&amp;fc=896&amp;brdim=1537%2C1%2C1537%2C1%2C1920%2C0%2C1918%2C1158%2C1920%2C1089&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=32768&amp;bc=31&amp;ifi=2&amp;uci=a!2&amp;fsb=1&amp;dtd=86"
-                data-google-container-id="a!2" data-load-complete="true"></iframe></div>
-    </ins><iframe src="https://www.google.com/recaptcha/api2/aframe" width="0" height="0"
-        style="display: none;"></iframe>
-</body><iframe id="google_esf" name="google_esf"
-    src="https://googleads.g.doubleclick.net/pagead/html/r20230201/r20190131/zrt_lookup.html"
-    style="display: none;"></iframe>
-
+    <script type="text/javascript" src="../resources/js/sidebar.js"></script>
 </html>
