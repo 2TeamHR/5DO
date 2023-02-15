@@ -13,8 +13,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
         <link rel="stylesheet" href="../../resources/css/sidebar.css">
-        <link rel="stylesheet" href="../../resources/css/attendance-management/annual-management-detailed.css">
-        <link rel="stylesheet" href="../../resources/css/main-margin.css">
+        <link rel="stylesheet" href="../../resources/css/mypage/organization-chart.css">
 
         <title>5DO</title>
         <meta http-equiv="origin-trial" content="Az6AfRvI8mo7yiW5fLfj04W21t0ig6aMsGYpIqMTaX60H+b0DkO1uDr+7BrzMcimWzv/X7SXR8jI+uvbV0IJlwYAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A+USTya+tNvDPaxUgJooz+LaVk5hPoAxpLvSxjogX4Mk8awCTQ9iop6zJ9d5ldgU7WmHqBlnQB41LHHRFxoaBwoAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A7FovoGr67TUBYbnY+Z0IKoJbbmRmB8fCyirUGHavNDtD91CiGyHHSA2hDG9r9T3NjUKFi6egL3RbgTwhhcVDwUAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><link rel="preload" href="https://adservice.google.co.kr/adsid/integrator.js?domain=www.cssscript.com" as="script"><script type="text/javascript" src="https://adservice.google.co.kr/adsid/integrator.js?domain=www.cssscript.com"></script><link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=www.cssscript.com" as="script"><script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=www.cssscript.com"></script>
@@ -288,89 +287,66 @@
             </nav>
         </div>
 
-        <!--========== CONTENTS ==========-->
-        <main class="main-margin">
+         <!--========== CONTENTS ==========-->
+         <main>
             <div class="main">
 
                 <div class="title">
-                    <p>연차 관리 - 상세페이지</p>
-                </div>
-
-                <div class="user-name">
-                    <span>박준영</span>
-                    <span>사원</span>
-                </div>
-
-                <!-- check box -->
-                <div class="d-flex flex-row justify-content-around annual-main-box">
-                    <div>
-                        <p>총 연차</p>
-                        <p class="fs-3">0</p>
-                    </div>
-                    <div>
-                        <p>사용 연차</p>
-                        <p class="fs-3">0</p>
-                    </div>
-                    <div>
-                        <p>잔여 연차</p>
-                        <p class="fs-3">0</p>
-                    </div>
-                    <div>
-                        <p>특별 연차</p>
-                        <p class="fs-3">0</p>
-                    </div>
-                    <div class="text-success">
-                        <p>누적 총 연차</p>
-                        <p class="fs-3">0</p>
-                    </div>
-                    <div class="text-success">
-                        <p>누적 사용 연차</p>
-                        <p class="fs-3">0</p>
-                    </div>
-                    <div class="text-success">
-                        <p>누적 잔여 연차</p>
-                        <p class="fs-3">0</p>
-                    </div>
-                    <div class="text-success">
-                        <p>누적 특별 연차</p>
-                        <p class="fs-3">0</p>
-                    </div>
-                </div>
-                <!-- check box -->
-                
-                <div class="main-btn">
-                    <div class="float-left">
-                        <span>휴가구분</span>
-                        <select>
-                            <option>전체</option>
-                            <option>지급</option>
-                            <option>차감</option>
-                        </select>
-                    </div>
-                    <div>
-                        <button class="annual-btn">연차지급</button>
-                        <button class="annual-btn">연차차감</button>
-                    </div>
+                    <p>조직도</p>
                 </div>
 
                 <div class="mt-5">
                     <table class="table">
                         <thead>
                         <tr class="text-center">
-                            <th scope="col">No</th>
-                            <th scope="col">휴가종류</th>
-                            <th scope="col">휴가구분</th>
-                            <th scope="col">날짜</th>
-                            <th scope="col">대상일</th>
+                            <th scope="col">부서</th>
+                            <th scope="col">팀</th>
+                            <th scope="col">이름</th>
+                            <th scope="col">직급</th>
+                            <th scope="col">내선번호</th>
+                            <th scope="col">메일</th>
                         </tr>
                         </thead>
                         <tbody class="text-center">
                         <tr>
-                            <th scope="row">1</th>
-                            <td>기본연차</td>
-                            <td>지급</td>
-                            <td>2023-01-11</td>
-                            <td>1일</td>
+                            <td>경영관리부</td>
+                            <td>인사팀</td>
+                            <td>대리</td>
+                            <td>홍길동</td>
+                            <td>712</td>
+                            <td>asd1234@5do.com</td>
+                        </tr>
+                        <tr>
+                            <td>경영관리부</td>
+                            <td>인사팀</td>
+                            <td>대리</td>
+                            <td>홍길동</td>
+                            <td>712</td>
+                            <td>asd1234@5do.com</td>
+                        </tr>
+                        <tr>
+                            <td>경영관리부</td>
+                            <td>인사팀</td>
+                            <td>대리</td>
+                            <td>홍길동</td>
+                            <td>712</td>
+                            <td>asd1234@5do.com</td>
+                        </tr>
+                        <tr>
+                            <td>경영관리부</td>
+                            <td>인사팀</td>
+                            <td>대리</td>
+                            <td>홍길동</td>
+                            <td>712</td>
+                            <td>asd1234@5do.com</td>
+                        </tr>
+                        <tr>
+                            <td>경영관리부</td>
+                            <td>인사팀</td>
+                            <td>대리</td>
+                            <td>홍길동</td>
+                            <td>712</td>
+                            <td>asd1234@5do.com</td>
                         </tr>
                         </tbody>
                     </table>
