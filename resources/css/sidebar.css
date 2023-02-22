@@ -336,5 +336,12 @@ img {
   margin-bottom: 5px;
 }
 
-.nav__dropdown-item {
+.main_notice_title {
+  text-decoration: none;
+  color: #58555e;
 }
+
+.main_notice_footer {
+  font-size: 15px;
+}
+
